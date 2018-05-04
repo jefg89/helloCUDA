@@ -87,7 +87,7 @@ int main(int argc,char **argv)
 
     //Copying data back to host, this is a blocking call and will not start until all kernels are finished
     cudaMemcpy(c, c_d, n*sizeof(int), cudaMemcpyDeviceToHost);
-    printf(" n = %d \t GPU time = %f \t CPU time = %f\n", n, time_d, time_h);
+    printf("n = %d \t GPU time = %fs \t CPU time = %fs\n", n, time_d, time_h);
 
     //Free GPU memory
     cudaFree(a_d);
